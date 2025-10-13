@@ -43,7 +43,7 @@ class StudentScore extends Score {
 /// students.txt 파일에서 학생 데이터를 읽어와 List<StudentScore>를 반환합니다.
 List<StudentScore> loadStudentData(String filePath) {
   final List<StudentScore> students = [];
-  print("✅ 학생 데이터를 불러오는 중...");
+  print(" 학생 데이터를 불러오는 중...");
 
   try {
     final file = File(filePath);
@@ -69,11 +69,11 @@ List<StudentScore> loadStudentData(String filePath) {
         print('경고: 점수 형식이 잘못되어 무시 - $line');
       }
     }
-    print("✅ ${students.length}명의 학생 데이터를 성공적으로 불러왔습니다.");
+    print(" ${students.length}명의 학생 데이터를 성공적으로 불러왔습니다.");
 
   } catch (e) {
     // 파일이 없거나 읽기 오류 발생 시
-    print("❌ 학생 데이터를 불러오는 데 실패했습니다: $e");
+    print(" 학생 데이터를 불러오는 데 실패했습니다: $e");
     // 프로그램 즉시 종료
     exit(1);
   }
@@ -91,10 +91,10 @@ void saveResults(String filePath, String content) {
     final file = File(filePath);
     // 동기 방식으로 파일에 문자열을 씁니다.
     file.writeAsStringSync(content);
-    print("✅ 저장이 완료되었습니다."); // 필수 조건: "저장이 완료되었습니다." 출력
+    print(" 저장이 완료되었습니다."); // 필수 조건: "저장이 완료되었습니다." 출력
     print("(저장 파일: $filePath)");
   } catch (e) {
-    print("❌ 저장에 실패했습니다: $e");
+    print(" 저장에 실패했습니다: $e");
   }
 }
 
@@ -135,7 +135,7 @@ void main() {
       );
 
       // 학생 정보 출력
-      print("🔎 확인 결과:");
+      print(" 확인 결과:");
       selectedStudent.showInfo(); // 출력 예시: "이름: 홍길동, 점수: 90"
 
       // 저장할 문자열 생성
@@ -150,7 +150,7 @@ void main() {
 
   // 4. 결과 파일 저장 및 프로그램 종료
   if (resultString != null) {
-    print("\n📝 결과를 파일에 저장하고 프로그램을 종료합니다.");
+    print("\n 결과를 파일에 저장하고 프로그램을 종료합니다.");
     saveResults('result.txt', resultString);
   }
 }
