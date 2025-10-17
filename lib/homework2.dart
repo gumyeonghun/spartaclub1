@@ -108,7 +108,7 @@ void main() {
 
   if (students.isEmpty) {
     print("분석할 학생 데이터가 없어 프로그램을 종료합니다.");
-    return;
+    return ;
   }
 
   // 3. 사용자로부터 입력 받아 학생 점수 확인 기능
