@@ -25,7 +25,7 @@ class _mainDisplayState extends State<MainDisplay> {
         children: [
           Container(),
           Container(),
-          Text('123'),
+          Text('브런치 바꿈'),
         ]
       ),
     );
