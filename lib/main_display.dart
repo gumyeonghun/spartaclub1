@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'dart:io';
+
+
 
 
 class MainDisplay extends StatefulWidget {
@@ -25,7 +26,7 @@ class _mainDisplayState extends State<MainDisplay> {
         children: [
           Container(),
           Container(),
-          Text('브런치 바꿈'),
+          Text('메인으로 바꿈2'),
         ]
       ),
     );
