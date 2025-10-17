@@ -25,7 +25,7 @@ class _mainDisplayState extends State<MainDisplay> {
         children: [
           Container(),
           Container(),
-          Text('1'),
+          Text('바꼈다'),
         ]
       ),
     );
